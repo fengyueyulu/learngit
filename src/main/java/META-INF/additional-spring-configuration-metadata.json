@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "<\/configuration>",
+    "type": "java.lang.String",
+    "description": "A description for '<\/configuration>'"
+  },
+  {
+    "name": "<include",
+    "type": "java.lang.String",
+    "description": "A description for '<include'"
+  },
+  {
+    "name": "<appender-ref",
+    "type": "java.lang.String",
+    "description": "A description for '<appender-ref'"
+  },
+  {
+    "name": "<logger",
+    "type": "java.lang.String",
+    "description": "A description for '<logger'"
+  },
+  {
+    "name": "<configuration>",
+    "type": "java.lang.String",
+    "description": "A description for '<configuration>'"
+  },
+  {
+    "name": "<?xml",
+    "type": "java.lang.String",
+    "description": "A description for '<?xml'"
+  }
+]}
