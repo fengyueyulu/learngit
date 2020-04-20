@@ -10,6 +10,7 @@ import org.springframework.data.annotation.Id;
  * @xhy Administrator
  *
  */
+//01
 public class Channel {
 	
 	@Id
