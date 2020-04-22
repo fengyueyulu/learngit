@@ -64,12 +64,15 @@ public class ChannelService {
 /**
  * ge
  * @param c
- * @return
+ * @return	// 更新频道信息
+	// c 新的频道信息
  */
-	public Channel updateChannel(Channel c) {
-		Channel saved = getChannel(c.getId());
+	 public Channel  updateChannel(Channel c) {
+		 //TODO 仅修改用户指定的属性
+		 Channel saved = getChannel(c.getId());
 		if (c.getTitle() != null) {
 			saved.setTitle(c.getTitle());
+			
 		}
 		if (c.getQuality() != null) {
 			saved.setQuality(c.getQuality());
@@ -77,19 +80,19 @@ public class ChannelService {
 		if (c.getUrl() != null) {
 			saved.setUrl(c.getUrl());
 		}
-		//
-		if(c.getComments()!=null) {
-			if(saved.getComments()!=null) {
+		
+		if (c.getComments() != null) {
+			if (saved.getComments() != null) {//把新评论追加到老评论后面
 				saved.getComments().addAll(c.getComments());
-				}else {
-			saved.setComments(c.getComments());
-				}
+			}else {//用新评论代替老的空评论
+				saved.setComments(c.getComments());
+			}
 		}
-		return repo.save(saved);// 保存更新后的实体对象
+		
+		return repo.save(saved); //保存更新后的实体对象
 	}
 
-	// 更新频道信息
-	// c 新的频道信息
+
 	public Channel renewChannel(Channel c) {
 
 		return repo.save(c);
